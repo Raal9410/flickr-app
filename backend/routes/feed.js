@@ -1,8 +1,8 @@
-const router = require('express').Router()
-const {publicPhotos, getTagPhotos} = require('../controllers/flickrController')
+const router = require('express').Router();
+const { publicPhotos, getTagPhotos } = require('../controllers/flickrController');
 
-router.get('/public', publicPhotos)
+router.get('/public', publicPhotos);
 
-router.get('/filtered', getTagPhotos)
+router.get('/filtered', getTagPhotos);
 
-module.exports = router
+module.exports = router;
