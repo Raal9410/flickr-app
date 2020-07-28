@@ -16,12 +16,10 @@ const useFlickrApi = () => {
 
     const results = await API.get('/public');
 
-    console.log(results)
-
     setState(prevState => ({
       ...prevState,
       loading: false,
-      images: results,
+      images: results.data,
     }));
   };
 
