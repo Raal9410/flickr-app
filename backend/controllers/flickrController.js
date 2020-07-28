@@ -11,7 +11,7 @@ exports.publicPhotos = async (req, res, next) => {
 };
 
 exports.getTagPhotos = async (req, res, next) => {
-  const { tag } = req.query;
+  const { tag } = req.params;
   const publicPhotos = feeds.publicPhotos();
   const feed = await axios.get(`${publicPhotos.url}?format=json&nojsoncallback=1&tags=${tag}`);
   const filteredFeed = feed.data.items.map(e => e.link);
