@@ -14,14 +14,12 @@ const useFlickrApi = () => {
       loading: true,
     }));
 
-    const {
-      data: { results },
-    } = await API.get('/public');
+    const results = await API.get('/public');
 
     setState(prevState => ({
       ...prevState,
       loading: false,
-      images: results,
+      images: results.data,
     }));
   };
 
@@ -31,9 +29,7 @@ const useFlickrApi = () => {
       loading: true,
     }));
 
-    const {
-      data: { results },
-    } = await API.get(`/filtered/${tag}`);
+    const results = await API.get(`/filtered/${tag}`);
 
     setState(prevState => ({
       ...prevState,
