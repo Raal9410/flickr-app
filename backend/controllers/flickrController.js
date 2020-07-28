@@ -5,7 +5,7 @@ const feeds = new Flickr.Feeds();
 
 exports.publicPhotos = async (req, res, next) => {
   const publicPhotos = feeds.publicPhotos();
-  const feed = await axios.get(`${publicPhotos.url}?format=json&nojsoncallback=1`);
+  const feed = await axios.get(`${publicPhotos.url}?format=json&nojsoncallback=1$safe_search=1`);
   const publicFeed = feed.data.items.map(e => e.media.m);
   res.status(200).send(publicFeed);
 };
@@ -13,7 +13,7 @@ exports.publicPhotos = async (req, res, next) => {
 exports.getTagPhotos = async (req, res, next) => {
   const { tag } = req.params;
   const publicPhotos = feeds.publicPhotos();
-  const feed = await axios.get(`${publicPhotos.url}?format=json&nojsoncallback=1&tags=${tag}`);
+  const feed = await axios.get(`${publicPhotos.url}?format=json&nojsoncallback=1$safe_search=1&tags=${tag}`);
   const filteredFeed = feed.data.items.map(e => e.media.m);
   if(filteredFeed.length !== 0){
     res.status(200).send(filteredFeed);
