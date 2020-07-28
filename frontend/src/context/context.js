@@ -16,7 +16,7 @@ const useFlickrApi = () => {
 
     const {
       data: { results },
-    } = await API.get('/public/');
+    } = await API.get('/public');
 
     setState(prevState => ({
       ...prevState,
