@@ -33,7 +33,7 @@ const useFlickrApi = () => {
 
     const {
       data: { results },
-    } = await API.get(`/filtered?tag=${tag}`);
+    } = await API.get(`/filtered/${tag}`);
 
     setState(prevState => ({
       ...prevState,
