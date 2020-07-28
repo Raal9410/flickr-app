@@ -1,9 +1,17 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Card = styled.img `
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-`
+const Card = styled.img`
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 5px;
+`;
 
-export default Card
+const CardContainer = styled.div`
+  display: flex;
+  max-width: 200px;
+  max-height: 150px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export { Card, CardContainer };

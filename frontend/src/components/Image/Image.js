@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import Card from './styles'
+import { Card, CardContainer } from './styles';
 
-const ImageCard = ({content}) => {
-    return (
-        <Card src={content} alt={content}/>
-    )
-}
+const ImageCard = ({ content }) => (
+  <CardContainer>
+    <Card src={content} alt={content} />
+  </CardContainer>
+);
 
-export default ImageCard
+export default ImageCard;
