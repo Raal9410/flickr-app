@@ -14,9 +14,9 @@ const useFlickrApi = () => {
       loading: true,
     }));
 
-    const {
-      data: { results },
-    } = await API.get('/public');
+    const results = await API.get('/public');
+
+    console.log(results)
 
     setState(prevState => ({
       ...prevState,
@@ -31,9 +31,7 @@ const useFlickrApi = () => {
       loading: true,
     }));
 
-    const {
-      data: { results },
-    } = await API.get(`/filtered/${tag}`);
+    const results = await API.get(`/filtered/${tag}`);
 
     setState(prevState => ({
       ...prevState,
