@@ -63,6 +63,14 @@ const Button = styled.button`
     border-radius: 3px;
     background: white;
   }
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 `;
 
 const Lens = styled.img`
