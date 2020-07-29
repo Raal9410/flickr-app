@@ -12,6 +12,7 @@ const AppRouter = () => {
                 <Navbar/>
                 <Switch>
                     <Route path="/" component={Dashboard} exact={true}/>
+                    <Route path="/filtered/:tag" component={} exact={true}/>
                 </Switch>
             </BrowserRouter>
         </Context.Provider>

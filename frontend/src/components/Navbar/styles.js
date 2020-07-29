@@ -13,6 +13,7 @@ const NavbarContainer = styled.div`
   flex-direction: row;
   align-items: center;
   align-self: flex-end;
+  margin-left: 100px;
   }
 `;
 
