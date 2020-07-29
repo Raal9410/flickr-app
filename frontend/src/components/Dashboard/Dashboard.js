@@ -1,33 +1,26 @@
-import React, { useContext, useEffect } from 'react'
-import {Context} from '../../context/context'
+import React, { useContext, useEffect } from 'react';
+import ReactLoading from 'react-loading';
+import { Context } from '../../context/context';
 
-import ImageCard from '../Image/Image'
+import ImageCard from '../Image/Image';
 
-import Container from './styles'
+import Container from './styles';
 
 const Dashboard = () => {
-    const { images, fetchPublicFeed} = useContext(Context)
+  const { images, fetchPublicFeed } = useContext(Context);
 
-    useEffect(() => {
-        fetchPublicFeed()
-    }, [])
+  useEffect(() => {
+    fetchPublicFeed();
+  }, []);
 
-    const render = () => {
-        if(images.length){
-            return images.map((image, i) => (
-                <ImageCard key={i} content={image}/>
-            ))
-        } else {
-            return '...Loading'
-        }
+  const render = () => {
+    if (images.length) {
+      return images.map(image => <ImageCard key={image} content={image} />);
     }
+    return <ReactLoading type="balls" color="black" height={100} width={300} />;
+  };
 
-    console.log( images)
-    return (
-        <Container>
-        {render()}
-        </Container>
-    )
-}
+  return <Container>{render()}</Container>;
+};
 
-export default Dashboard
+export default Dashboard;
