@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import FlickrApp from './routers/AppRouter'
+import FlickrApp from './routers/AppRouter';
 
-ReactDOM.render(
-  <FlickrApp/>,
-  document.getElementById('root')
-);
+ReactDOM.render(<FlickrApp />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
