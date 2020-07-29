@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import ReactLoading from 'react-loading';
 import { Context } from '../../context/context';
 
-import ImageCard from '../Image/Image';
+import ImageCard from '../Image/ImageCard';
 
 import Container from './styles';
 
