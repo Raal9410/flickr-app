@@ -34,7 +34,7 @@ const useFlickrApi = () => {
     setState(prevState => ({
       ...prevState,
       loading: false,
-      images: results,
+      images: results.data,
     }));
   };
 
