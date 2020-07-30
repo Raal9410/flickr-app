@@ -10,8 +10,8 @@ const Dashboard = () => {
   const { images, fetchPublicFeed } = useContext(Context);
 
   useEffect(() => {
-    fetchPublicFeed();
-  }, []);
+    fetchPublicFeed(); // eslint-disable-next-line
+  }, []); 
 
   const render = () => {
     if (images.length) {
